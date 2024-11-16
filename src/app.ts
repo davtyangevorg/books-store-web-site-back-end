@@ -12,7 +12,7 @@ const app = express();
 // Use CORS middleware
 app.use(
   cors({
-    origin: "https://gevbooks.store",
+    // origin: "https://gevbooks.store",
     credentials: true,
   })
 );
