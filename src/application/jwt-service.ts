@@ -1,7 +1,8 @@
 import jwt from "jsonwebtoken";
 import { TUserWithId } from "../types/users";
+import { config } from "../config";
 
-const JWT_SECRET = process.env.JWT_SECRET || "secret";
+const JWT_SECRET = config.jwt.secret;
 
 export const jwtService = {
   createJWT: async (user: TUserWithId) => {

@@ -6,13 +6,14 @@ import path from "path";
 import cartRouter from "./routes/cart-router";
 const cors = require("cors"); // Import the CORS package
 const cookieParser = require("cookie-parser");
+import { config } from "./config";
 
 const app = express();
 
 // Use CORS middleware
 app.use(
   cors({
-    origin: "https://gevbooks.store",
+    origin: config.cors.origin,
     credentials: true,
   })
 );

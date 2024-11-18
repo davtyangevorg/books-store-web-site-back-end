@@ -1,7 +1,8 @@
 import nodemailer from "nodemailer";
+import { config } from "../config";
 
-const EMAIL_USER = process.env.EMAIL_USER || "gevbackgevbackfront@gmail.com";
-const EMAIL_PASS = process.env.EMAIL_PASS || "ufgh fobw cfia hhpg";
+const EMAIL_USER = config.email.user;
+const EMAIL_PASS = config.email.pass;
 
 export const emailAdapter = {
   sendEmail: async function (to: string, subject: string, body: string) {
